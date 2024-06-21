@@ -27,7 +27,6 @@ public class LoginPage {
        WebUI.setText(inputPassword,password);
        WebUI.clickElement(buttonLogin);
        WebUI.sleep(2);
-
    }
 
    By messageSuccess = By.xpath("//div[contains(text(),'Đăng nhập thành công')]");
@@ -35,6 +34,14 @@ public class LoginPage {
        boolean ketquamongmuon = WebUI.getTextElement(messageSuccess).trim().equals(messageloginthanhcong);
        Assert.assertTrue(ketquamongmuon,"Fail");
    }
+
+    public void LoginThatBai (String email,String password){
+        WebUI.openURL(URl);
+        WebUI.setText(inputEmail,email);
+        WebUI.setText(inputPassword,password);
+        WebUI.clickElement(buttonLogin);
+        WebUI.sleep(2);
+    }
 
    By messageFailed = By.xpath("//div[contains(text(),'Email hoặc mật khẩu không đúng')]");
    public void verifyLoginThatBai(String messageloginthatbai){

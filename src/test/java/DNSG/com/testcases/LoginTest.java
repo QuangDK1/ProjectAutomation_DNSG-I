@@ -25,7 +25,7 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
         excelHelper = new ExcelHelper();
         excelHelper.setExcelFile("src/main/resources/datatest/LoginPage.xlsx","AccountUser");
-        loginPage.LoginThanhCong(excelHelper.getCellData(7,5),
+        loginPage.LoginThatBai(excelHelper.getCellData(7,5),
                                  excelHelper.getCellData(8,5));
         loginPage.verifyLoginThatBai(excelHelper.getCellData(10,5));
     }
