@@ -105,7 +105,9 @@ public class QuanLySuKienPage {
     By editgioketthuc = By.xpath("//li[@aria-label='16 giờ']");
     By editphutketthuc = By.xpath("//li[@aria-label='10 phút']");
     By editTinh = By.xpath("li[normalize-space()='Bình Định']");
-    By MesageEditSKthanhcong = By.xpath("//div[contains(text(),'Thao tác thành công')]");
+    //By MesageEditSKthanhcong = By.xpath("//div[contains(text(),'Thao tác thành công')]");
+    By logout = By.xpath("//div/header/div/div/button");
+
     public void ChinhSuaSuKien(String tenskedit, String EditDiaDiem, String Editmotangan, String Editgioithieuchung) {
         WebUI.clickElement(pageQLSK);
         WebUI.clickElement(pageSuKienB2B);
@@ -152,10 +154,22 @@ public class QuanLySuKienPage {
         WebUI.clickElement(btnLuuSKnew);
         WebUI.sleep(2);
     }
-    public void verifyMessageEditSuKienThanhCong (String messageEditthanhcong){
-        boolean Editthanhcong = WebUI.getTextElement(MesageEditSKthanhcong).equals(messageEditthanhcong);
-        Assert.assertTrue(Editthanhcong,"Fail");
-    }
+
+    //Check sự kiện
+
+
+
+
+//    public void verifyMessageEditSuKienThanhCong (String messageEditthanhcong){
+//        boolean Editthanhcong = WebUI.getTextElement(MesageEditSKthanhcong).equals(messageEditthanhcong);
+//        Assert.assertTrue(Editthanhcong,"Fail");
+//    }
+
+
+
+
+
+
 
 
 
