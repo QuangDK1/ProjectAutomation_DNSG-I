@@ -27,11 +27,13 @@ public class QuanLySuKienPage {
     By tensukien = By.xpath("//div/div[1]/div/div[3]/div/input");
     By ngaydienrasukien = By.xpath("//div[1]/div/div[4]/div/input");
     By btnlichSK = By.xpath("//div/div[1]/div/div[4]/div/div/button");
+    By thangsau = By.xpath("//div[5]/div[2]/div/div/div/div[1]/div[2]/button[2]");
+    By cuoithang8 = By.xpath("//div/div/div[2]/div/div/div[2]/div/div[5]/button[6]");
+    By popupChonNgayDienra = By.xpath("//div[2]/div/div/div[2]/div/div[5]/button[3]");
     By thoigianbatdauSK = By.xpath("//div/div[1]/div/div[5]/div/input");
     By thoigianketthucSK = By.xpath("//div[1]/div/div[6]/div/input");
     By btnselectthoigianbatdau = By.xpath("//div[1]/div/div[5]/div/div/button");
     By btnselectthoigianketthuc = By.xpath("//div/div[1]/div/div[6]/div/div/button");
-    By popupChonNgayDienra = By.xpath("//div/div/div/div[2]/div/div/div[2]/div/div[5]/button[7]");
     By HOUR = By.xpath("//li[@aria-label='4 giờ']");
     By MINUTE = By.xpath("//li[@aria-label='10 phút']");
     By HOURTGKT = By.xpath("//li[@aria-label='10 giờ']");
@@ -39,7 +41,7 @@ public class QuanLySuKienPage {
     By SelectTinhThanhPho = By.xpath("//div/div/main/div/div[3]/div/div[2]/div/div[2]/div/div");
     By tinh = By.xpath("//li[normalize-space()='Khánh Hòa']");
     By diemdiem = By.xpath("//div[2]/div/div[3]/div/input");
-    By gioithieumotangan = By.xpath("//textarea[@id=':r23:']");
+    By gioithieumotangan = By.xpath("//div[3]/div/div[3]/div[1]/div/textarea[1]");
     By gioithieuchung = By.xpath("//div/div[3]/div[2]/div[2]/div/div[2]/div[1]");
     By btnLuuSKnew = By.xpath("//div/div/main/div/div[7]/button[2]");
     public void ThemMoiSuKien(String TenSuKien, String DiaDiem, String GioiThieuNgan, String GioiThieuChung  ) {
@@ -155,8 +157,16 @@ public class QuanLySuKienPage {
         WebUI.sleep(2);
     }
 
-    //Check sự kiện
 
+    By page9thmonlyb2bUser = By.xpath("//main/header/div[2]/div/div/div[2]/a");
+    By CheckSK = By.xpath("//div[1]/div[3]/div[2]/div[2]/div[6]/div/a");
+
+    //Check sự kiện
+    public void CheckSuKien(){
+        WebUI.clickElement(page9thmonlyb2bUser);
+        WebUI.clickElement(CheckSK);
+        WebUI.sleep(2);
+    }
 
 
 

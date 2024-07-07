@@ -39,8 +39,18 @@ public class QuanLySuKienTest extends BaseTest {
                                         excelHelper.getCellData(15,5),
                                         excelHelper.getCellData(16,5));
         //quanLySuKienPage.verifyThemMoiSuKienThanhCong(excelHelper.getCellData(18,5));
-
     }
+    @Test(priority = 2)
+    public void CheckSuKienThanhCong(){
+        loginPage = new LoginPage();
+        quanLySuKienPage = new QuanLySuKienPage();
+        loginPage.LoginThanhCong("alt.zm-eoze7jtz@yopmail.com","quang2001");
+        quanLySuKienPage.CheckSuKien();
+    }
+
+
+
+
 
 //    @Test(priority = 3)
 //    public void XoaSuKienB2B(){
